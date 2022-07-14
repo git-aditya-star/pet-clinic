@@ -11,10 +11,11 @@
 
     <artifactId>pet-clinic-data</artifactId>
 
-<!--    <properties>-->
+    <properties>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
 <!--        <maven.compiler.source>18</maven.compiler.source>-->
 <!--        <maven.compiler.target>18</maven.compiler.target>-->
-<!--    </properties>-->
+    </properties>
 
     <dependencies>
         <dependency>
@@ -43,31 +44,28 @@
         </dependency>
     </dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>repackage</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <skip>true</skip>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <excludes>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <exclude>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <groupId>org.projectlombok</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <artifactId>lombok</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </exclude>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </excludes>&ndash;&gt;-->
-<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+<!--                <configuration>-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
