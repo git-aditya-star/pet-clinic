@@ -2,14 +2,9 @@ package aditya.springframework.petclinic.services;
 
 import aditya.springframework.petclinic.model.Owner;
 
-import java.util.Set;
+public interface OwnerService extends CrudService<Owner, Long>{
 
-public interface OwnerService {
+    //OwnerService has  other common methods too which are already defined in the CrudService only Unique ones are to be declared.
     Owner findByLastName(String lastName);
 
-    Owner findById(Long id);
-
-    Owner save(Owner owner);
-
-    Set<Owner> findAll();
 }
