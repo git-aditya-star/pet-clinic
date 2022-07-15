@@ -1,4 +1,4 @@
-package aditya.springframework.petclinic.model;
+package aditya.springframework.petclinic.services.model;
 
 public class PetType extends BaseEntity{
 

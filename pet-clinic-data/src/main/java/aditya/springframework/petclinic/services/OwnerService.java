@@ -1,6 +1,6 @@
 package aditya.springframework.petclinic.services;
 
-import aditya.springframework.petclinic.model.Owner;
+import aditya.springframework.petclinic.services.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long>{
 
