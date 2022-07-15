@@ -2,8 +2,6 @@ package aditya.springframework.petclinic.bootstrap;
 
 import aditya.springframework.petclinic.services.OwnerService;
 import aditya.springframework.petclinic.services.VetService;
-import aditya.springframework.petclinic.services.map.OwnerServiceMap;
-import aditya.springframework.petclinic.services.map.VetServiceMap;
 import aditya.springframework.petclinic.services.model.Owner;
 import aditya.springframework.petclinic.services.model.Vet;
 import org.springframework.boot.CommandLineRunner;
@@ -15,12 +13,12 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-
-
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();      //creating new objects because it contains only the methods not some variable data.
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
+
 
     @Override
     public void run(String... args) throws Exception { //spring runs this method
